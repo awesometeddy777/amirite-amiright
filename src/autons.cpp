@@ -56,45 +56,96 @@ void left9()
         {23, 35},  //
         {3, 50}    //
     });
-    driveTurn(-64, 600);
+    driveTurn(-68, 80, 600);
     driveStraightChain({
-        {2, 40} //
+        {2, 42} //
     });
     delay(100);
     licker.set_value(true);
     delay(300);
     driveStraightChain({
-        {-8, 40} //
+        {-5, 73} //
+
     });
-    driveTurn(50, 900);
-    delay(50);
+    driveTurn(18, 80, 700);
     driveStraightChain({
-        {-40, 79} //
+        {-8, 75} //
     });
-    driveTurn(20, 500);
+    driveTurn(63, 80, 800);
     licker.set_value(false);
-    delay(100);
-    driveStraightNew(752, 700);
+    delay(300);
+    angleChanger.set_value(false);
+    driveStraightNew(430, 800);
+
+    intake.move(127);
     blockBlock.set_value(false);
-    intake.move(127);
-    delay(500);
-    intake.move(-127);
-    delay(200);
-    intake.move(127);
     delay(1200);
+    intake.move(-70);
+    delay(600);
     blockBlock.set_value(true);
+    intake.move(127);
+    // intake.move(127);
     driveStraightChain({
-        {1, 80}, //
-        {-6, 50} //
+        {-10, 90}, //
+        {-10, 73},
+        {-11, 45} //
     });
-    driveTurn(-163, 800);
-    delay(250);
+
+    driveTurn(-162, 80, 800);
     licker.set_value(true);
-    delay(200);
+    angleChanger.set_value(true);
+    delay(500);
     driveStraightChain({
-        {2, 70} //
+        {3, 30} //
     });
     delay(1200);
+    driveStraightChain({
+        {-5, 80} //
+    });
+    driveTurn(18, 80, 800);
+    licker.set_value(false);
+    driveStraightChain({
+        {4, 60} //
+    });
+    driveBrake();
+    blockBlock.set_value(false);
+    intake.move(-127);
+    delay(500);
+    intake.move(127);
+    delay(5000);
+
+    // driveStraightChain({
+    //     {-8, 40} //
+    // });
+    // driveTurn(50, 900);
+    // delay(50);
+    // driveStraightChain({
+    //     {-40, 79} //
+    // });
+    // driveTurn(20, 500);
+    // licker.set_value(false);
+    // delay(100);
+    // driveStraightNew(752, 700);
+    // blockBlock.set_value(false);
+    // intake.move(127);
+    // delay(500);
+    // intake.move(-127);
+    // delay(200);
+    // intake.move(127);
+    // delay(1200);
+    // blockBlock.set_value(true);
+    // driveStraightChain({
+    //     {1, 80}, //
+    //     {-6, 50} //
+    // });
+    // driveTurn(-163, 800);
+    // delay(250);
+    // licker.set_value(true);
+    // delay(200);
+    // driveStraightChain({
+    //     {2, 70} //
+    // });
+    // delay(1200);
 }
 // void left9()
 // {

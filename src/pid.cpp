@@ -739,7 +739,7 @@ void driveStraightChain(std::vector<StraightMove> moves)
     }
 }
 
-void driveTurn(int target, int timeout = 5000)
+void driveTurn(int target, int speed = 100, int timeout = 5000)
 {
     trueTarget = target;
     double voltage;
@@ -768,6 +768,13 @@ void driveTurn(int target, int timeout = 5000)
 
         // PID output
         voltage = calcPID(target, position, TURN_INTEGRAL_KI, TURN_MAX_INTEGRAL);
+
+        // Apply speed cap (like driveStraightC)
+        int maxVolt = 127 * speed / 100; // scale by % speed
+        if (voltage > maxVolt)
+            voltage = maxVolt;
+        if (voltage < -maxVolt)
+            voltage = -maxVolt;
 
         driveVolts(voltage, -voltage, 0);
 

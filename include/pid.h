@@ -57,7 +57,7 @@ extern void driveStraight2(int target, int speed, int timeout);
 extern void driveStraightInches(double targetInches);
 extern void driveStraightC(int target, int speed);
 extern void driveStraightChain(std::vector<StraightMove> moves);
-extern void driveTurn(int target, int timeout);
+extern void driveTurn(int target, int speed, int timeout);
 extern void driveArcRF(double theta, double radius, int speed, int timeout);
 extern void driveArcLF(double theta, double radius, int speed, int timeout);
 
